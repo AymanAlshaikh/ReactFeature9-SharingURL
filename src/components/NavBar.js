@@ -1,14 +1,28 @@
 // Styling
-import { ThemeButton } from "../styles";
-
+import { ThemeButton, Logo, NavStyle } from "../styles";
+import { Link, NavLink } from "react-router-dom";
 const NavBar = (props) => {
   return (
     <nav className="navbar navbar-expand">
-      <h4 className="navbar-brand">add your logo</h4>
+      <Logo to="/" className="navbar-brand">
+        {" "}
+        <img
+          src="https://cdn.logo.com/hotlink-ok/logo-social.png"
+          height="100px"
+        />
+      </Logo>
       <div className="navbar-nav ml-auto">
-        <a className="nav-item" style={{ padding: "0.25em 1em" }}>
+        <NavStyle to="/" className="nav-item" style={{ padding: "0.25em 1em" }}>
+          Home
+        </NavStyle>
+        <Link
+          to="/products"
+          className="nav-item"
+          style={{ padding: "0.25em 1em" }}
+        >
           Products
-        </a>
+        </Link>
+
         <ThemeButton className="nav-item" onClick={props.toggleTheme}>
           {props.currentTheme === "light" ? "Dark" : "Light"} Mode
         </ThemeButton>
