@@ -76,13 +76,13 @@ function App() {
       <NavBar currentTheme={currentTheme} toggleTheme={toggleTheme} />
       <Switch>
         <Route path="/products/:productSlug">
-          <ProductDetail products={_products} deleteProduct={deleteProduct} />
+          <ProductDetail deleteProduct={deleteProduct} />
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/products">
-          <ProductList products={_products} deleteProduct={deleteProduct} />
+          <ProductList deleteProduct={deleteProduct} />
         </Route>
       </Switch>
     </ThemeProvider>
