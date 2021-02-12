@@ -1,5 +1,6 @@
 // Components
 import DeleteButton from "./buttons/DeleteButton";
+import UpdateButton from "./buttons/UpdateButton";
 // Styling
 import { ProductWrapper } from "../styles";
 import { Link, NavLink } from "react-router-dom";
@@ -13,6 +14,7 @@ const ProductItem = (props) => {
       </Link>
       <p>{product.name}</p>
       <p className="product-price">{product.price} KD</p>
+      <UpdateButton product={product} />
       <DeleteButton productId={product.id} />
     </ProductWrapper>
   );

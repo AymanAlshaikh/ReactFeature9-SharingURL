@@ -1,5 +1,6 @@
 // Components
 import DeleteButton from "./buttons/DeleteButton";
+import UpdateButton from "./buttons/UpdateButton";
 // Styling
 import { DetailWrapper } from "../styles";
 import { useParams } from "react-router-dom";
@@ -19,6 +20,7 @@ const ProductDetail = (props) => {
       <p>{product.description}</p>
       <p>{product.price} KD</p>
       <DeleteButton productId={product.id} />
+      <UpdateButton product={product} />
     </DetailWrapper>
   );
 };
